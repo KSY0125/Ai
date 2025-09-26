@@ -7,3 +7,4 @@
 	(4) from A import B as C - A패키지 안의 B모듈을 C이름으로 가져옴.
 	    from A.B import C as D - A안에 있는 B모듈 속 C(함수/변수/클래스)를 D이름으로 가져옴
 2절 패키지 : __init__.py 포함한 모듈
+3절 패키지 설치 및 삭제
