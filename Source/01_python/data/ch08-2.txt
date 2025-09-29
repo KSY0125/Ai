@@ -1,0 +1,1 @@
+이건 ANSI 형태로 저장된 txt파일임. ANSI = cp949
