@@ -1,0 +1,20 @@
+[
+	{
+		"Name": "네이마르",
+		"Age": 32,
+		"Email": "nm10@brazil.com",
+		"Address": "Sao paolo"
+	},
+	{
+		"Name": "호나우지뉴",
+		"Age": 48,
+		"Email": "rd11@brazil.com",
+		"Address": "Santos"
+	},
+	{
+		"Name": "호비뉴",
+		"Age": 43,
+		"Email": "rb9@brazil.com",
+		"Address": "Rio"
+	}
+]

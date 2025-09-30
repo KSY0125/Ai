@@ -1,0 +1,39 @@
+9장 파일 입출력 프로그래밍
+
+- 파일 : txt, pickle (머신러닝 모델 저장, 배열 저장), csv, json, h5(딥러닝 모델 저장)
+    >    - h5보다 pickle이 더 쉽다. pickle은 파이썬 전용이라 보면 됨
+    >    - *.h5 *.hdf5 *.pickle *.pkl *.data = 객체list, dictlist
+1절. txt파일에 데이터 저장하고 불러오기
+with open ('filepath(상대경로/절대경로)', 'w|r|a', encoding) as f:
+	list변수 = f.readlines() / 문자변수 = f.read()
+	f.write(저장할 문자열) / f.writelines(저장할 라인들)
+- 한글 읽기/쓰기
+    > * cp949(한글완성형확장형) : open함수의 기본 인코딩(win)
+    > * utf-8(한글조합형) : 주피터노트북에서 열기
+1-1 파일 쓰기 : f.writelines(textlist) textlist라는 리스트 변수 주고 덮어씌워 쓰기
+1-2 파일 한꺼번에 읽어오기 : filecontent = f.read()
+
+2절. 피클(pkl, pickle, data) i/o
+with open('filepath', 'wb|rb|ab' as f:
+	객체리스트변수 = pickle.load(f) - in(read)
+	pickle.dump(객체리스트변수, f) = out(where)
+- 주로 머신러닝 모델저장, 배열저장, 객체저장에서 쓰임
+
+3절. CSV 파일 i/o
+with open('filepath', 'w|r|a', encoding) as f: #기본인코딩 cp949
+	reader = csv.reader(f) - csv 파일을 list데이터로 read
+	writer = csv.writer(f)
+	=> writer.writerows(list데이터) - list데이터를 csv로 write
+
+	dict_reader = csv.DictReader(f) - 딕셔너리 데이터로
+	dict_writer = csv.DictWriter(f)
+	=> dict_writer.writeheader(): dict_writer.writerows(list)
+
+4절. JSON 파일 i/o
+with open('filepath', 'r|w|a', endoing) as f:
+	리스트변수 = json.load(f) - 딕셔너리로 읽기
+	객체리스트변수 = json.load(f, object_hook=함수명)
+			함수명 : 딕셔너리를 객체로 return
+	json.dump(리스트변수, f, ensure_ascii, indent) - 저장
+	json.dump(객체리스트, f, default=클래스명.함수명)
+		함수명 : 객체를 딕셔너리로 return

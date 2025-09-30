@@ -1,0 +1,20 @@
+[
+	{
+		"name": "Kane",
+		"age": 30,
+		"email": "hk10@munich.com",
+		"address": "Munchen"
+	},
+	{
+		"name": "Reus",
+		"age": 32,
+		"email": "mr7@dortmund.com",
+		"address": "Dortmund"
+	},
+	{
+		"name": "Eriksen",
+		"age": 34,
+		"email": "ce10@hotspur.com",
+		"address": "Tottenham"
+	}
+]
